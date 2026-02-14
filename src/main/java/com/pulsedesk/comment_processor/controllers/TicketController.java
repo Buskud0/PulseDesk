@@ -20,4 +20,10 @@ public class TicketController {
     public List<Ticket> getAllTickets() {
         return ticketRepository.findAll();
     }
+
+    @GetMapping("/{id}")
+    public Ticket getTicketById(@PathVariable Long id) {
+        return ticketRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Bilietas su ID " + id + " nerastas!"));
+    }
 }
