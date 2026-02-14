@@ -35,14 +35,15 @@ public class CommentController {
         try {
             String aiResponse = aiService.analyzeComment(savedComment.getContent());
             System.out.println("DEBUG: AI gautas atsakymas -> " + aiResponse);
+            String[] parts = aiResponse.split(";");
 
-            if (aiResponse != null && aiResponse.toUpperCase().contains("YES")) {
+            if (parts[0].equals("yes") && parts.length == 4) {
                 Ticket ticket = new Ticket();
                 ticket.setOriginalComment(savedComment);
                 ticket.setTitle("Problema #" + savedComment.getId());
-                ticket.setCategory("other"); //kolkas
-                ticket.setPriority("high"); //kolkas
-                ticket.setSummary("AI analizė: " + aiResponse);
+                ticket.setCategory(parts[1]);
+                ticket.setPriority(parts[2]);
+                ticket.setSummary(parts[3]);
 
                 ticketRepository.save(ticket);
                 System.out.println("DEBUG: Ticket sėkmingai sukurtas!");
