@@ -1,4 +1,4 @@
 # Pulse Desk
-Pulse Desk - programa, leidžianti automatizuoti ir palengvinti vartotojų atsiliepimų bei komentarų analizę, pasitelkiant dirbtinį intelektą.
+Pulse Desk is a program designed to automate and simplify the analysis of user feedback and comments through the power of artificial intelligence.
 
-*Atsisiuntimą bei instrukcijas rasite "Releases" skiltyje.*
+You can find the download and instructions in the "Releases" section.
