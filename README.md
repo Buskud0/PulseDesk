@@ -8,5 +8,6 @@ Pulse Desk is an application designed to automate and simplify the analysis of u
 
 
 **How to use it:**
+
 Enter a customer support issue and watch it appear in the table! 
 To view the original comment click on the table element.
