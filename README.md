@@ -14,5 +14,4 @@ java -DHUGGINGFACE_KEY=YOUR_KEY -jar PulseDesk.jar
 ## How to use it
 
 Enter a customer support issue and watch it appear in the table.
-
 To view the original comment, click on the table element.
