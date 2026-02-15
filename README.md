@@ -1,5 +1,3 @@
 # PulseDesk
-Kaip paleisti programą:
-Atsisiųskite PulseDesk-v1.jar failą žemiau.
-Terminale naudokite komandą:
-java -DHUGGINGFACE_KEY=JŪSŲ_RAKTAS -jar PulseDesk.jar
+Pulse Desk - programa, leidžianti automatizuoti ir palengvinti vartotojų atsiliepimų bei komentarų analizę, pasitelkiant dirbtinį intelektą.
+Atsisiuntimą bei instrukcijas rasite "Releases" skiltyje.
