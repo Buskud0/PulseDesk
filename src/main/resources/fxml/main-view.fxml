@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.pulsedesk.comment_processor.controllers.TicketViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pulsedesk.comment_processor.controllers.TicketViewController">
+   <children>
+      <TableView fx:id="ticketTable" layoutX="24.0" layoutY="23.0" prefHeight="205.0" prefWidth="553.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="23.0">
+        <columns>
+            <TableColumn fx:id="colID" prefWidth="28.0" text="ID" />
+            <TableColumn fx:id="colPriority" prefWidth="63.0" text="Priority" />
+            <TableColumn fx:id="colCategory" prefWidth="89.0" text="Category" />
+            <TableColumn fx:id="colSummary" prefWidth="372.0" text="Summary" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="commentField" layoutX="57.0" layoutY="245.0" prefHeight="97.0" prefWidth="216.0" promptText="Write a comment..." wrapText="true" />
+      <Button layoutX="144.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleSend" text="Send" />
+      <TextArea fx:id="originalTextField" editable="false" layoutX="315.0" layoutY="245.0" prefHeight="125.0" prefWidth="248.0" promptText="Original ticket text will appear here." wrapText="true" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="37.0" />
+   </children>
 </AnchorPane>

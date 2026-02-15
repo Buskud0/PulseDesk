@@ -41,8 +41,8 @@ public class CommentController {
                 Ticket ticket = new Ticket();
                 ticket.setOriginalComment(savedComment);
                 ticket.setTitle("Problema #" + savedComment.getId());
-                ticket.setCategory(parts[1]);
-                ticket.setPriority(parts[2]);
+                ticket.setPriority(parts[1]);
+                ticket.setCategory(parts[2]);
                 ticket.setSummary(parts[3]);
 
                 ticketRepository.save(ticket);

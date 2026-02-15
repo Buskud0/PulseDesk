@@ -41,10 +41,10 @@ public class AiService {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(body, headers);
 
         try {
-            ResponseEntity<Map> response = restTemplate.postForEntity(apiUrl, entity, Map.class); //istraukiame pagrindini AI atsakyma
-            List<Map<String, Object>> choices = (List<Map<String, Object>>) response.getBody().get("choices"); //visi galimi atsakymai
-            Map<String, Object> message = (Map<String, Object>) choices.get(0).get("message"); //pasirenkame pirma atsakyma
-            String aiText = (String) message.get("content"); //istraukiame atsakymo teksta
+            ResponseEntity<Map> response = restTemplate.postForEntity(apiUrl, entity, Map.class);
+            List<Map<String, Object>> choices = (List<Map<String, Object>>) response.getBody().get("choices");
+            Map<String, Object> message = (Map<String, Object>) choices.get(0).get("message");
+            String aiText = (String) message.get("content");
 
             System.out.println("AI ATSAKYMAS: " + aiText);
             return aiText;
