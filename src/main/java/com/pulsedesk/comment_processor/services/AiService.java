@@ -45,7 +45,6 @@ public class AiService {
             List<Map<String, Object>> choices = (List<Map<String, Object>>) response.getBody().get("choices");
             Map<String, Object> message = (Map<String, Object>) choices.get(0).get("message");
             String aiText = (String) message.get("content");
-
             System.out.println("AI ATSAKYMAS: " + aiText);
             return aiText;
         } catch (Exception e) {

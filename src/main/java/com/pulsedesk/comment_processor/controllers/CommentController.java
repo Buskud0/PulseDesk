@@ -34,7 +34,6 @@ public class CommentController {
 
         try {
             String aiResponse = aiService.analyzeComment(savedComment.getContent());
-            System.out.println("DEBUG: AI gautas atsakymas -> " + aiResponse);
             String[] parts = aiResponse.split(";");
 
             if (parts[0].equals("yes") && parts.length == 4) {
@@ -46,10 +45,9 @@ public class CommentController {
                 ticket.setSummary(parts[3]);
 
                 ticketRepository.save(ticket);
-                System.out.println("DEBUG: Ticket sėkmingai sukurtas!");
             }
         } catch (Exception e) {
-            System.out.println("DEBUG: Klaida analizuojant -> " + e.getMessage());
+            System.out.println("Klaida analizuojant -> " + e.getMessage());
         }
 
         return savedComment;
