@@ -12,11 +12,11 @@ public class AiService {
     @Value("${huggingface.api.url}")
     private String apiUrl;
 
-    @Value("${huggingface.api.key}")
-    private String apiKey;
-
     @Value("${huggingface.api.model}")
     private String model;
+
+    @Value("${HUGGINGFACE_KEY}")
+    private String apiKey;
 
     private final RestTemplate restTemplate = new RestTemplate();
 
