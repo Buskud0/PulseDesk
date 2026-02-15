@@ -4,7 +4,7 @@ Pulse Desk is an application designed to automate and simplify the analysis of u
 
 ## How to run the app
 
-1. Download the `PulseDesk.jar` file below.
+1. Download the `PulseDesk.jar` file from the "Releases" section.
 2. Use this command in the terminal:
 
 ```bash
